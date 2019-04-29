@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🔥 My Web Page</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style type="text/css">
+        div:not(.footer){
+            background-color: #fff !important;
+            /*border:2px solid aqua;*/
+        }
+        *::selection{
+            background-color: rgba(199,155,100,0.6) ;
+        }
+        .nav{
+            width: 100%;
+            height: 60px;
+            position: fixed;
+            /*background-color: #000;*/
+            z-index: 999;
+        }
+        .logo{
+            display:inline-block;
+            float:left;
+            width:200px;
+            height: 60px;
+            font-size: 30px;
+            /*color: #fff;*/
+            line-height: 60px;
+            background: url("image/icon9.png") no-repeat 0 10px;
+            background-size: 40px;
+            padding-left: 45px;
+            margin-left: 125px;
+        }
+
+        .nav_link{
+            display: inline-block;
+            float:right;
+
+        }
+        .nav_link li{
+            list-style: none;
+            display: inline-block;
+            font-size: 18px;
+            line-height: 60px;
+            }
+        .nav_link li a{
+            display: block;
+            width:90px;
+            height: 50px;
+            /*color: #fff;*/
+            color:#000;
+            text-align: center;
+           text-decoration: none;
+            /*border-bottom: 3px solid red;*/
+        }
+        .nav_link li a:hover {
+            color: red ;
+            border-bottom: 3px solid red;
+        }
+        .login{
+            display: block;
+            width:70px;
+            /*color:#fff;*/
+            background: url("image/login.png") no-repeat 0 20px;
+            background-size: 20px;
+            padding-left: 30px;
+            cursor: help;
+        }
+        .cont_bg{
+            width:100%;
+            height:350px;
+            background:url("image/cyfer27.jpg") repeat-x 0 60px;
+            background-size: 100% 467px;
+            position: relative;
+            opacity: 1;
+        }
+        .cont_img{
+            width:100%;
+            height:460px;
+            position: relative;
+        }
+        .cont_img img{
+            width: 350px;
+            height: 300px;
+            border:1px solid #000;
+            /*padding-left: 20px;*/
+
+        }
+        .cont_img li{
+            /*width: 350px;*/
+            /*height: 300px;*/
+            display: inline-block;
+            padding-left: 20px;
+
+        }
+        .cont_span,.cont_span1,.cont_span2,.cont_span3,.cont_span4{
+            display: block;
+            width:110px;
+            height:20px;
+            color: rgba(199,155,100,0.6);
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            background-color: #fff;
+            position: absolute;
+            bottom:96px;
+            left:146px;
+        }
+        .cont_span1{
+            left:520px;
+        }
+        .cont_span2{
+            left:900px;
+        }
+        .cont_span3{
+            left:1260px;
+        }
+        .cont_span4{
+            left:1650px;
+        }
+        .cont_img li a{
+            color:rgba(0,0,0,0.1)
+            text-decoration: none;
+        }
+        .cont_img li a p:hover,.cont_img li a:hover{
+            color:rgba(199,155,100,0.6);
+            text-decoration: none;
+        }
+        .cont_img li a p{
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+            color: aqua;
+        }
+        .p_data{
+            color: #ddd;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .p_title{
+            color: deeppink;
+            font-size: 24px;
+            height: 60px;
+            line-height: 40px;
+            text-align: center;
+            margin-top: 30px ;
+        }
+
+        .section{
+            width: 1208px;
+            height: 3966px;
+            margin:0 auto;
+            margin-top: 70px;
+        }
+        .section_left{
+            background-color: green;
+            width: 800px;
+            height: 3966px;
+            float: left;
+        }
+        .secleft_part1{
+            background-color: red;
+            width: 800px;
+            height: 980px;
+        }
+        .secleft_part2{
+            background-color: orange;
+            width: 800px;
+            height: 1223px;
+        }
+        .secleft_part3{
+            background-color: yellow;
+            width: 800px;
+            height: 963px;
+        }
+        .secleft_part4{
+            background-color: blue;
+            width: 800px;
+            height: 800px;
+        }
+        .secleft_part2 ul li em{
+            display:block;
+        }
+        .secleft_part2 ul li{
+            float:left;
+        }
+        /*.secleft_part2 ul li::after{*/
+            /*content: "";*/
+            /*display: block;*/
+            /*visibility:hidden;*/
+            /*height:0;*/
+            /*clear: both;*/
+        /*}*/
+        .secleft_part4 ul li em{
+            display:block;
+        }
+        .secleft_part4 ul li{
+            float:left;
+        }
+        .secleft_part1 em,.secleft_part2 em,.secleft_part3 em,.secleft_part4 em{
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            font-style: oblique;
+            font-family: FangSong;
+            padding-top:20px;
+        }
+        h2{
+            text-align: center;
+            font-size: 20px;
+            font-weight: normal;
+            letter-spacing: 4px;
+            margin:35px 0;
+        }
+        .secleft_part1 a,.secleft_part3 a{
+            display:block;
+            width: 100px;
+            height: 30px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            text-decoration: none;
+            line-height: 35px;
+            font-size: 18px;
+            color: rgb(199,155,100) ;
+            border-bottom: 2px solid rgb(199,155,100);
+            text-align: center;
+        }
+        .secleft_part1 a:hover,.secleft_part3 a:hover{
+            border-style: none;
+        }
+        .secleft_part1 img,.secleft_part3 img{
+            display: block;
+            margin: 0 auto;
+        }
+        .secleft_part2 ul li img,.secleft_part4 ul li img{
+            display: block;
+            margin: 0 10px;
+        }
+        .secleft_part1 p,.secleft_part3 p{
+            text-align: center;
+            font-size: 16px;
+            margin: 40px 30px;
+            font-family: YouYuan;
+        }
+        .secleft_part1_p1 a,.secleft_part3_p3 a{
+            width: 300px;
+            text-decoration: none;
+            border-style: none;
+            display: block;
+            float: left;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(199,155,100) ;
+            margin-top:-32px;
+
+        }
+        .secleft_part1_ul,.secleft_part3_ul{
+            width: 90px;
+            margin-top:-20px;
+        }
+        .secleft_part2 a,.secleft_part4 a{
+            display:inline-block;
+            width: 300px;
+            height: 30px;
+            text-decoration: none;
+            line-height: 35px;
+            font-size: 18px;
+            color: rgb(199,155,100) ;
+            margin-left: 40px;
+            margin-top: 10px;
+            margin-right: 50px;
+        }
+        #secleft_part4_a{
+            display: block;
+            width: 150px;
+            height: 40px;
+            text-decoration: none;
+            text-align:center ;
+            line-height: 35px;
+            font-size: 16px;
+            font-weight: normal;
+            color: rgb(199,155,100) ;
+            margin :0 auto;
+            margin-top: 60px;
+            border: 1px solid rgb(199,155,100) ;
+        }
+        #secleft_part4_a:hover{
+            background-color: rgb(199,155,100);
+            color: #fff;
+        }
+        .secleft_part2 ul li p,.secleft_part4 ul li p{
+            text-align: center;
+            font-size: 16px;
+            margin: 40px 10px;
+            font-family: YouYuan;
+        }
+        .secleft_part1 ul,.secleft_part3 ul{
+            float:right;
+            list-style: none;
+        }
+        .secleft_part1 ul li,.secleft_part3 ul li{
+            display:inline-block;
+            margin-top: -24px;
+        }
+        .section_right{
+            background-color: pink;
+            width: 400px;
+            height: 3000px;
+            float: left;
+
+        }
+        .cont_bottom{
+            width:100%;
+            height: 200px;
+            background-color: yellow;
+
+        }
+        .footer{
+            width: 100%;
+            height:70px;
+            background-color: black;
+            margin: 0px;
+            padding: 0px;
+        }
+        .footer address{
+            color: rgb(185,140,90);
+            text-align: center;
+            line-height: 70px;
+        }
+
+        h3{
+            font-weight: normal;
+            text-align: center;
+            font-size: 24px;
+            color:rgb(199,155,100);
+            text-decoration:line-through ;
+            margin: 40px 0;
+        }
+        .secright_p{
+            width: 320px;
+            margin: 0 39px;
+            line-height: 20px;
+            font-size: 16px;
+            font-family: "Adobe Fan Heiti Std B";
+            color:rgba(199,155,100,0.6) ;
+            cursor:text ;
+        }
+        .secright_span{
+            display: block;
+            width: 120px;
+            height: 40px;
+            margin: 0 auto;
+            color:rgb(199,155,100);
+            padding-top: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .secright_span:hover{
+            background-color:rgba(199,155,100,0.6);
+            color: #fff;
+        }
+        img[title="cyfer"]{
+                margin: 0 39px;
+                padding: 20px 0;
+        }
+        input{
+            width: 240px;
+            height: 45px;
+            border-width: 0px;
+            margin-top: 10px;
+
+        }
+        input[name="submit"]{
+            color:#fff;
+            border:1px solid rgb(185,140,90);
+            background-color: rgb(185,140,90);
+            margin-bottom: 10px;
+        }
+        .secright_table tr td{
+            display: block;
+            width: 360px;
+            height:40px;
+            border-bottom:3px solid #ddd;
+            font-size: 18px;
+            color: #000;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+        img[title="icon"]{
+            margin: 0 179px;
+            padding: 20px 0;
+        }
+        .secright_ul li{
+            width: 300px;
+            height: 100px;
+            border-bottom:3px solid #ddd;
+            background: url("image/cyfer17.jpg") 0 10px no-repeat;
+            background-size:90px;
+            margin-top: 20px;
+        }
+        .secright_ul li a{
+            text-decoration: none;
+        }
+        .secright_ul li a p{
+            text-decoration: none;
+            font-style:normal;
+        }
+        .secright_ul li a p:hover{
+            color: aqua;
+        }
+        .secright_ul li a>p{
+            color:#000;
+            font-size: 18px;
+
+        }
+        .secright_ul li p{
+            padding-top: 20px;
+            padding-left: 105px;
+            /*text-align: center;*/
+            font-size: 18px;
+            color: #ddd;
+            line-height: 6px;
+            font-style: italic;
+        }
+        #section_right_ins{
+            height: 104px;
+            width: 400px;
+            transition: 3s ease;
+
+        }
+        #section_right_ins:hover{
+            background:url("image/bg_logo5.jpg") no-repeat;
+            background-size: 400px 104px;
+            border: 1px solid rgb(185,140,90);
+            transform: rotate(360deg);
+        }
+        .secright_address{
+            text-align: center;
+            font-size: 18px;
+        }
+        h1{
+            font-size: 25px;
+            letter-spacing: 8px;
+            font-weight: 400;
+            text-align: center;
+        }
+        h4{
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+        .cont_bottom ul{
+            width: 450px;
+            height: 20px;
+            list-style: none;
+            margin: 0 auto;
+        }
+        .cont_bottom ul li{
+            width: 70px;
+            height: 20px;
+            display: inline-block;
+            float: left;
+            margin-right: 20px;
+        }
+        .cont_bottom ul li a{
+            text-decoration: none;
+            background: url("image/icon52.png") no-repeat;
+            background-size: 14px;
+            padding-left:16px;
+        }
+        .cont_bottom ul li a:hover{
+            color:rgb(185,140,90) ;
+
+        }
+        #cont_bottom_abg1{
+             background: url("image/icon61.png") no-repeat;
+            background-size: 14px;
+         }
+        #cont_bottom_abg2{
+            background: url("image/icon65.png") no-repeat;
+            background-size: 14px;
+        }
+        #cont_bottom_abg3{
+            background: url("image/icon57.png") no-repeat;
+            background-size: 14px;
+        }
+        #cont_bottom_abg4{
+            background: url("image/icon50.png") no-repeat;
+            background-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+ <span class="logo"><a href="https://www.douyu.com/67373" style="text-decoration: none;" target="_blank" title="Cqupt NB!">重邮_潘潘潘</a> </span>
+    <ul class="nav_link">
+        <li><a href="#">HOME</a> </li>
+        <li><a href="#">AbOUT</a> </li>
+        <li><a href="#">CONTACT</a> </li>
+        <li><a href="#">HOBby</a> </li>
+        <li><a href="#" style="margin-right: 300px;">SoulMATE</a> </li>
+        <li><span class="login" onclick="alert('我还没有完成2333...')">LOGin</span></li>
+    </ul>
+</div>
+<div class="cont_bg"></div>
+<div class="cont_img">
+    <p class="p_title">LATEST PHOTOS</p>
+    <div align="center">
+    <ul>
+        <li style="padding-left:0;">
+            <a href="#">
+            <img src="image\cyfer1.jpg" alt="图片显示不正常" title="thebs">
+            <span class="cont_span">thebs</span>
+            </a>
+            <a href="#"><p>Chen Yi Faer</p></a>
+            <p class="p_data">Oct 16,2018</p>
+        </li>
+        <li>
+            <a href="#">
+            <img src="image\cyfer2.jpg" alt="图片显示不正常" title="thebs">
+            <span class="cont_span1">thebs</span>
+            </a>
+            <a href="#"><p>Chen Yi Faer</p></a>
+            <p class="p_data">Oct 16,2018</p>
+        </li>
+        <li>
+            <a href="#">
+            <img src="image\cyfer3.jpg" alt="图片显示不正常" title="thebs">
+            <span class="cont_span2">thebs</span>
+            </a>
+            <a href="#"><p>Chen Yi Faer</p></a>
+            <p class="p_data">Oct 16,2018</p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="image\cyfer4.jpg" alt="图片显示不正常" title="thebs">
+                <span class="cont_span3">thebs</span>
+            </a>
+            <a href="#"><p>Chen Yi Faer</p></a>
+            <p class="p_data">Oct 16,2018</p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="image\cyfer5.jpg" alt="图片显示不正常" title="thebs">
+                <span class="cont_span4">thebs</span>
+            </a>
+            <a href="#"><p>Chen Yi Faer</p></a>
+            <p class="p_data">Oct 16,2018</p>
+        </li>
+    </ul>
+    </div>
+</div>
+<div class="section">
+<div class="section_left">
+    <div class="secleft_part1">
+        <em>Lifestyle</em>
+        <h2>THAT SUMMER</h2>
+        <img src="image/cyfer4.jpg" width="750px" height="500px" alt="图片未显示" title="陈一发儿"/>
+        <p style="width: 740px;">
+            时间的沙漏，从指尖悄然流逝，断然决绝。幽幽尘世，繁华三千。用温暖的手，拥抱每一个清晨，用一颗赤子之心，安之若素地行走在每一个清晨和日暮，善待每一个今天。只要你愿意温柔以待这个世界，那么这个世界也会用温柔的姿态馈赠予你。 ​
+        </p>
+        <a href="#">READ MORE</a>
+        <div style="width: 800px;height: 50px;background-color: snow;border-top: 2px dotted #ddd;border-bottom: 2px dotted #ddd;">
+            <p class="secleft_part1_p1"><a href="#">October 16,2018 Blue Day</a></p>
+            <ul class="secleft_part1_ul">
+                <li><img src="image/icon9.png"  width="15px" alt="图片未显示"/> </li>
+                <li><img src="image/icon9.png"  width="15px" alt="图片未显示"/> </li>
+                <li><img src="image/icon9.png"  width="15px" alt="图片未显示"/> </li>
+                <li><img src="image/icon9.png"  width="15px" alt="图片未显示"/> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secleft_part2">
+        <ul>
+            <li>
+            <img src="image/cyfer1.jpg" width="380px" height="280px"  alt="图片未显示" title="陈一发儿"/>
+            <em>Lifestyle</em>
+            <h2>MEET thebs</h2>
+            <p style="width: 380px;">有些伤口，时间久了就会慢慢长好；有些委屈，受过了想通了也就释然了；有些伤痛，忍过了疼久了也成习惯了……然而却在很多孤独的瞬间，又重新涌上心头。其实，有些藏在心底的话，并不是故意要去隐瞒，只是，并不是所有的疼痛，都可以呐喊。.</p>
+            </li>
+            <li>
+                <img src="image/cyfer5.jpg" width="380px" height="280px"  alt="图片未显示" title="陈一发儿"/>
+                <em>Lifestyle</em>
+                <h2>MIssing thebs</h2>
+                <p style="width: 380px;">有人说，你的性情和三观决定了你会和谁在一起。 你可以和心动的人谈恋爱，那是真性情， 一定要嫁给一个心定的人，那是真安心。 林徽因和陆小曼的人生选择也许诠释了这一切~</p>
+            </li>
+            <div style="height: 0px;clear: both"></div>
+        </ul>
+            <div style="width: 800px;height: 50px;background-color: snow;border-top: 2px dotted #ddd;border-bottom: 2px dotted #ddd;">
+                 <a href="#">October 16,2018 Blue Day</a>
+                 <a href="#">October 16,2018 Blue Day</a>
+            </div>
+        <ul>
+            <li>
+                <src="image/cyfer2.jpg" width="380px" height="280px"  alt="图片未显示" title="陈一发儿"/>
+                <em>Lifestyle</em>
+                <h2>MEET thebs</h2>
+                <p style="width: 380px;">如果说爱情中没有一点控制欲和占有欲， 那是不符合人性的，也不能够是爱…… 但是如果你把对方监视得很紧， 又是不明智的，也许应该考虑下， 是不是在不好的爱情里得到的负能量~</p>
+            </li>
+            <li  class="123">
+                <img src="image/cyfer3.jpg" width="380px" height="280px"  alt="图片未显示" title="陈一发儿"/>
+                <em>Lifestyle</em>
+                <h2>MIssing thebs</h2>
+                <p style="width: 380px;">平淡的生活很好
+                    偶尔也需要增添一抹色彩
+                    让我看看别人的故事里
+                    是不是也有曾经自己的影子
+                </p>
+            </li>
+            <div style="height: 0px;clear: both"></div>
+
+        </ul>
+        <div style="width: 800px;height: 50px;background-color: snow;border-top: 2px dotted #ddd;border-bottom: 2px dotted #ddd;">
+            <a href="#">October 16,2018 Blue Day</a>
+            <a href="#">October 16,2018 Blue Day</a>
+        </div>
+    </div>
+    <div class="secleft_part3">
+        <em>Lifestyle</em>
+        <h2>ESCAPE FROM REALITY</h2>
+        <img src="image/cyfer10.jpg" width="750px" height="500px" alt="图片未显示" title="陈一发儿"/>
+        <p style="width: 740px;">
+            你只看到了我坚强的表象，
+            却不知道我是否在夜里哭泣，
+            如果你问我，我也不会告诉你……
+            每个人都有自己隐忍的地方，
+            内心最软弱的不可触碰的地方，
+            能坦然面对，是因为知道一切愿赌服输……
+        </p>
+        <a href="#">READ MORE</a>
+        <div style="width: 800px;height: 50px;background-color: snow;border-top: 2px dotted #ddd;border-bottom: 2px dotted #ddd;">
+            <p class="secleft_part3_p3"><a href="#">October 16,2018 Blue Day</a></p>
+            <ul class="secleft_part3_ul">
+                <li><img src="image/icon9.png"  width="15px"  alt="图片未显示"/> </li>
+                <li><img src="image/icon9.png"  width="15px"  alt="图片未显示"/> </li>
+                <li><img src="image/icon9.png"  width="15px"  alt="图片未显示"/> </li>
+                <li><img src="image/icon9.png"  width="15px"  alt="图片未显示"/> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secleft_part4">
+        <ul>
+            <li>
+                <img src="image/cyfer11.jpg" width="380px" height="280px"  alt="图片未显示" title="陈一发儿"/>
+                <em>Lifestyle</em>
+                <h2>MEET thebs</h2>
+                <p style="width: 380px;">
+                    尚好的你，一去的岁月💔 尚好的你，随着你为期💔
+                    尚好的你，忘了放开你💔 尚好的你，让我看看你💔
+                    尚好的你，我在等你呢💔 尚好的你，一定不要忘💔
+                    尚好的你，跨过这距离💔 尚好的你，感谢你曾在💔
+                    尚好的你，不让我远走💔 尚好的你，要多远才见💔
+                    尚好的你，风追了你走💔 尚好的你，一直走尽头💔
+                </p>
+            </li>
+            <li>
+                <img src="image/cyfer14.jpg" width="380px" height="280px"  alt="图片未显示" title="陈一发儿"/>
+                <em>Lifestyle</em>
+                <h2>MIssing thebs</h2>
+                <p style="width: 380px;">
+                    尚好的你，还是不见你💔 尚好的你，还让我怎找💔
+                    尚好的你，多远的未来💔 尚好的你，你是否记得💔
+                    尚好的你，最疯狂时刻💔 尚好的你，不曾有过你💔
+                    尚好的你，和哪个的他💔 尚好的你，感谢你来过💔
+                    尚好的你，尚好的青春💔 尚好的你，陪着我走停💔
+                    尚好的你，不知那年岁💔 尚好的你，你又在何方💔
+                </p>
+            </li>
+            <div style="height: 0px;clear: both"></div>
+        </ul>
+        <div style="width: 800px;height: 50px;background-color: snow;border-top: 2px dotted #ddd;border-bottom: 2px dotted #ddd;">
+            <a href="#">October 16,2018 Blue Day</a>
+            <a href="#">October 16,2018 Blue Day</a>
+        </div>
+        <a id="secleft_part4_a" href="#">LOAD MORE</a>
+    </div>
+</div>
+<div class="section_right">
+    <div>
+    <h3 class="secright_h3">AbOUT ME</h3>
+    <img src="image/cyfer16.jpg" alt="图片显示不正常" title="cyfer" width="320px"  />
+        <p class="secright_p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我天性不宜交际。在多数场合，我不是觉得对方乏味，就是害怕对方觉得我乏味。可是我既不愿忍受对方的乏味，也不愿费劲使自己显得有趣，那都太累了。</p>
+    <span class="secright_span">Cqupter_PanY</span>
+    </div>
+    <div>
+        <table align="center">
+            <h3>About you</h3>
+            <tr>
+                <td><input type="text" name="you_mail" placeholder="You email address" style="border: 1px solid #ddd;"/> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="FINISH"   /></td>
+            </tr>
+        </table>
+    </div>
+    <h3>Best of you</h3>
+    <div id="section_right_ins" ></div>
+    <div>
+        <table class="secright_table" border="0" cellspacing="0" cellpadding="0" align="center" >
+            <h3>All of thebs</h3>
+            <tr>
+                <td><span>Lifestyle<em>(8)</em></span></td>
+            </tr>
+            <tr>
+                <td><span>Travel<em>(14)</em></span></td>
+            </tr>
+            <tr>
+                <td><span>Beauty<em>(5)</em></span></td>
+            </tr>
+            <tr>
+                <td><span>Music<em>(3)</em></span></td>
+            </tr>
+            <tr>
+                <td><span>Photo<em>(7)</em></span></td>
+            </tr>
+        </table>
+        <img src="image/cyfer12.jpg" alt="图片显示不正常" title="cyfer" width="320px" />
+        <h3>RECENT LIFE</h3>
+        <ul class="secright_ul">
+            <li>
+                <a href="#"><p>The Best Orange Cat</p></a>
+                <p>Oct 16,2018</p>
+            </li>
+            <li>
+                <a href="#"><p>First Summer Ice Cream</p></a>
+                <p>Oct 16,2018</p>
+            </li>
+            <li>
+                <a href="#"><p>Best Hat for Travel</p></a>
+                <p>Oct 16,2018</p>
+            </li>
+            <li>
+                <a href="#"><p>New Look is Arrived</p></a>
+                <p>Oct 16,2018</p>
+            </li>
+
+        </ul>
+        <div>
+            <h3>ONCE UPON a TIME</h3>
+            <video width="400px" height="300px" controls="controls">
+                <source src="video/陈一发儿-童话镇.mp4" type="video/mp4">
+                <source src="video/陈一发儿-童话镇.mp4" type="video/ogg">
+                <source src="video/陈一发儿-童话镇.mp4" type="video/webm">
+                <object data="video/陈一发儿-童话镇.mp4"  width="400px" height="300px">
+                    <embed src="video/陈一发儿-童话镇.mp4" width="400px" height="300px" />
+                </object>
+            </video>
+        </div>
+        <div>
+            <h3>CONTACT Me</h3>
+            <img src="image/heart.png" width="40px" height="40px" title="icon" alt="图片显示不正常" />
+            <address class="secright_address"><a href="#" style="text-decoration: none;color: deeppink;">&copy;PanPanPan</a></address>
+        </div>
+    </div>
+</div>
+<div style="height: 0px;clear:both;"></div>
+</div>
+<div class="cont_bottom">
+    <h1>CYFER PAGE</h1>
+    <h4>FOLLOW @PanPanPan</h4>
+    <ul>
+        <li><a href="#">SNAPCHAT</a> </li>
+        <li><a href="#" id="cont_bottom_abg1">SKYPE</a> </li>
+        <li><a href="#" id="cont_bottom_abg2">FACEBOOK</a> </li>
+        <li><a href="#" id="cont_bottom_abg3">PINTEREST</a> </li>
+        <li><a href="#" id="cont_bottom_abg4">TWITTER</a> </li>
+
+    </ul>
+</div>
+<div class="footer">
+    <address>COPYRIGHT &copy; 2018.12.6 ALL RIGHTS RESERVED <a href="#" style="color:rgb(185,140,90);text-decoration: none;">潘潘潘</a></address>
+</div>
+</body>
+</html>
